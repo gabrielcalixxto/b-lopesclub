@@ -211,6 +211,36 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* CTA Section */}
+        <section id="agendamento" className="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-8 md:px-16">
+            <div className="grid gap-0">
+              {/* Contato */}
+              <div className="from-gray-900 text-white text-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center from-gray-900 to-black text-white gap-8">
+                  <div className="from-gray-900 text-white flex justify-center mb-8 md:mb-0">
+                    <img
+                      src="/assets/lopesclubicon.png"
+                      alt="logo2"
+                      className="w-64 h-64 md:w-64 md:h-64"
+                      width={400}
+                      height={256}
+                    />
+                  </div>
+                  <div className="text-center md:text-center">
+                    <h1 className="text-2xl md:text-3xl font-bold whitespace-nowrap mb-5">🚀 Agende seu horário 🚀</h1>
+                    <button
+                      onClick={openAgendamento}
+                      className="botao-ousado inline-block text-white font-bold py-3 px-8 md:py-4 md:px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
+                    >
+                      AGENDAR AGORA
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
   );
 }
