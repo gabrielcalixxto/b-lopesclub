@@ -1,6 +1,6 @@
 'use client';
 import Link from "next/link";
-import { useState, useEffect,} from "react";
+import { useState, useEffect, } from "react";
 import Image from "next/image";
 
 
@@ -16,14 +16,12 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30 ${
-      isScrolled 
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30 ${isScrolled
         ? 'bg-black/90 backdrop-blur-sm'  // Se scrolled: fundo preto transparente
         : 'bg-transparent'
-    }`}>
-      <nav className={`max-w-6xl mx-auto px-6 transition-all duration-400 ${
-        isScrolled ? 'py-0' : 'py-4'  // Altura menor: py-1 quando scrolled, py-4 normal
       }`}>
+      <nav className={`max-w-6xl mx-auto px-6 transition-all duration-400 ${isScrolled ? 'py-0' : 'py-4'  // Altura menor: py-1 quando scrolled, py-4 normal
+        }`}>
         {/* Menu horizontal com logo centralizado */}
         <div className="flex items-center justify-center">
           <div className="hidden lg:flex items-center gap-16 text-white">
@@ -33,7 +31,7 @@ export default function Header() {
             <Link href="#servicos" className="hover:text-blue-400 transition-colors font-medium uppercase tracking-wider text-sm">
               SERVIÇOS
             </Link>
-            
+
             {/* Logo central */}
             <div className="mx-8">
               <Image
@@ -41,12 +39,12 @@ export default function Header() {
                 alt="Lopes Club"
                 width={300}
                 height={300}
-                className={`object-contain transition-all duration-400 ${
-                  isScrolled ? 'w-28 h-28' : 'w-60 h-60'  // Logo menor quando scrolled
-                }`}
+                className={`object-contain transition-all duration-400 ${isScrolled ? 'w-28 h-28' : 'w-60 h-60'  // Logo menor quando scrolled
+                  }`}
+                priority
               />
             </div>
-            
+
             <Link href="#galeria" className="hover:text-blue-400 transition-colors font-medium uppercase tracking-wider text-sm">
               GALERIA
             </Link>
@@ -55,7 +53,7 @@ export default function Header() {
             </Link>
           </div>
         </div>{/* Mobile menu button */}
-        <button 
+        <button
           className="lg:hidden fixed p-2 text-white hover:text-blue-400 transition-colors z-[9999]"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -73,29 +71,29 @@ export default function Header() {
       {isMenuOpen && (
         <div className="lg:hidden mr-28 bg-black/95 backdrop-blur-md">
           <div className="px-6 py-8 space-y-6 text-center">
-            <Link 
-              href="#inicio" 
+            <Link
+              href="#inicio"
               className="block text-white hover:text-blue-400 transition-colors font-medium uppercase tracking-wider text-sm py-3"
               onClick={() => setIsMenuOpen(false)}
             >
               INÍCIO
             </Link>
-            <Link 
-              href="#servicos" 
+            <Link
+              href="#servicos"
               className="block text-white hover:text-blue-400 transition-colors font-medium uppercase tracking-wider text-sm py-3"
               onClick={() => setIsMenuOpen(false)}
             >
               SERVIÇOS
             </Link>
-            <Link 
-              href="#galeria" 
+            <Link
+              href="#galeria"
               className="block text-white hover:text-blue-400 transition-colors font-medium uppercase tracking-wider text-sm py-3"
               onClick={() => setIsMenuOpen(false)}
             >
               GALERIA
             </Link>
-            <Link 
-              href="#contato" 
+            <Link
+              href="#contato"
               className="block text-white hover:text-blue-400 transition-colors font-medium uppercase tracking-wider text-sm py-3"
               onClick={() => setIsMenuOpen(false)}
             >

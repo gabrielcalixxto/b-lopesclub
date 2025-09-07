@@ -6,9 +6,9 @@ export const dynamic = 'force-dynamic';
 
 export default function Home() {
 
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const openLogin = () => setIsLoginOpen(true);
-  const closeLogin = () => setIsLoginOpen(false);
+  const [isAgendamentoOpen, setIsAgendamentoOpen] = useState(false);
+  const openAgendamento = () => setIsAgendamentoOpen(true);
+  const closeAgendamento = () => setIsAgendamentoOpen(false);
   return (
     <main className="bg-white text-gray-900">
       {/* Hero Section */}
@@ -30,12 +30,12 @@ export default function Home() {
             </h1>
             <div>
               <button
-                onClick={openLogin}
-                className="px-4 py-2 bg-blue-600 text-white rounded"
+                onClick={openAgendamento}
+                className="botao-ousado inline-block text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
               >
-                Agendar
+                AGENDE SEU HORÁRIO
               </button>
-              <AgendamentoModal isOpen={isLoginOpen} onClose={closeLogin} />
+              <AgendamentoModal isOpen={isAgendamentoOpen} onClose={closeAgendamento} />
             </div>
           </div>
         </div>
@@ -165,11 +165,12 @@ export default function Home() {
               </div>
 
               <button
-                onClick={() => window.open('https://wa.me/5522997364126', '_blank')}
+                onClick={openAgendamento}
                 className="botao-ousado inline-block text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
               >
                 AGENDAR PELO WHATSAPP
               </button>
+              <AgendamentoModal isOpen={isAgendamentoOpen} onClose={closeAgendamento} />
             </div>
 
             <div className="grid grid-cols-1 gap-4">
