@@ -80,7 +80,7 @@ Agendamento solicitado via site!`;
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-      <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto shadow-lg">
+      <div className="bg-white rounded-lg max-w-md w-full max-h-[100vh] overflow-y-auto shadow-lg">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b">
           <div>

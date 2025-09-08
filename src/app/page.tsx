@@ -10,7 +10,7 @@ export default function Home() {
   const openAgendamento = () => setIsAgendamentoOpen(true);
   const closeAgendamento = () => setIsAgendamentoOpen(false);
   return (
-    <main className="bg-white text-gray-900">
+    <main className="bg-white text-gray-900 overflow-x-hidden">
       {/* Hero Section */}
       <section id="inicio" className="relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0">
@@ -198,7 +198,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">GALERIA DE CORTES</h2>
           <p className="text-center mb-6 text-gray-600 text-xl">✂️✨ Alguns dos nossos trabalhos recentes ✨✂️</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {['/assets/corte1.png', '/assets/corte2.jpeg', '/assets/corte3.png', '/assets/corte4.png', '/assets/corte5.png', '/assets/corte6.png', '/assets/corte7.png', '/assets/corte8.png'].map((src, i) => (
               <div key={i} className="w-full h-64 overflow-hidden rounded-lg shadow-lg">
                 <img
