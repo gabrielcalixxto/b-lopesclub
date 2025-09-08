@@ -42,24 +42,26 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="servicos" className="py-32 bg-white relative">
+      <section id="servicos" className="py-32 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="text-center lg:text-left">
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">NOSSOS SERVIÇOS</h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">NOSSOS SERVIÇOS</h2>
+              <p className="text-gray-600 text-lg mb-4">
                 Mais de uma década de experiência com tradições e tendências.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-12">
+              <p className="text-gray-600 mb-6">
                 Oferecemos uma experiência completa com produtos de qualidade e técnicas modernas para todos os estilos ✨
               </p>
-              <a
-                href="#galeria"
-                className="botao-ousado mx-auto lg:mx-0 text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105 block w-max"
+              <button
+                onClick={() => document.querySelector("#galeria")?.scrollIntoView({ behavior: "smooth" })}
+                className="botao-ousado inline-block text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
               >
                 VER GALERIA
-              </a>
+              </button>
             </div>
+
+
 
             <section className="relative">
               <div className="space-y-6 max-w-xl mx-auto relative z-10">
@@ -126,10 +128,10 @@ export default function Home() {
             </section>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Location Section */}
-      <section id="contato" className="py-20 bg-gray-100">
+      < section id="contato" className="py-20 bg-gray-100" >
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 mt-8 text-gray-900">NOSSA UNIDADE</h2>
@@ -163,17 +165,20 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <div >
+                <button
+                  onClick={openAgendamento}
+                  className="botao-ousado hidden lg:inline-block text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
+                >
+                  AGENDAR PELO WHATSAPP
+                </button>
+                <AgendamentoModal isOpen={isAgendamentoOpen} onClose={closeAgendamento} />
 
-              <button
-                onClick={openAgendamento}
-                className="botao-ousado inline-block text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
-              >
-                AGENDAR PELO WHATSAPP
-              </button>
-              <AgendamentoModal isOpen={isAgendamentoOpen} onClose={closeAgendamento} />
+              </div>
+
             </div>
 
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid max-md:grid-cols-2 grid-cols-1 gap-4">
               <img
                 src="/assets/foto-unidade-1.jpeg"
                 alt="Interior da Unidade"
@@ -189,12 +194,22 @@ export default function Home() {
                 height={192}
               />
             </div>
+            <div className="mt-8 text-center lg:hidden">
+              <button
+                onClick={openAgendamento}
+                className="botao-ousado inline-block text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
+              >
+                AGENDAR PELO WHATSAPP
+              </button>
+              <AgendamentoModal isOpen={isAgendamentoOpen} onClose={closeAgendamento} />
+
+            </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Gallery Section */}
-      <section id="galeria" className="py-32 bg-white">
+      < section id="galeria" className="py-32 bg-white" >
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">GALERIA DE CORTES</h2>
           <p className="text-center mb-6 text-gray-600 text-xl">✂️✨ Alguns dos nossos trabalhos recentes ✨✂️</p>
@@ -210,8 +225,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-      
-    </main>
+      </section >
+
+    </main >
   );
 }
