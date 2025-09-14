@@ -17,8 +17,8 @@ export default function Home() {
           <img
             src="/assets/backgroundhero.jpg"
             alt="Barbearia"
-            className="w-full h-screen md:h-full object-cover object-center"
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            className="w-full h-screen md:h-full object-cover"
+            style={{ objectFit: 'cover', objectPosition: 'center 7%' }}
           />
           <div className="absolute inset-0 bg-black/70" />
         </div>
