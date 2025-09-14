@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Barbearia Lopes Club",
   description: "Cortes de cabelo e barba com estilo. Agende seu horário!",
   openGraph: {
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     siteName: "Barbearia Lopes Club",
     images: [
       {
-        url: "https://www.barbearialopesclub.com.br/preview.jpg", // coloque aqui uma imagem hospedada no seu site
-        width: 1200,
+        url: "https://www.barbearialopesclub.com.br/assets/lopesclubicon.png",
+        width: 1200, // ajuste se sua imagem tiver outro tamanho
         height: 630,
         alt: "Barbearia Lopes Club",
       },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Barbearia Lopes Club",
     description: "Cortes de cabelo e barba com estilo. Agende seu horário!",
-    images: ["https://www.barbearialopesclub.com.br/preview.jpg"],
+    images: ["https://www.barbearialopesclub.com.br/assets/lopesclubicon.png"],
   },
 };
 
