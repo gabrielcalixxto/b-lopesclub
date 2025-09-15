@@ -8,14 +8,13 @@ export const metadata = {
   description: "Cortes de cabelo e barba com estilo. Agende seu horário!",
   openGraph: {
     title: "Barbearia Lopes Club",
-    description: "Cortes de cabelo e barba com estilo. Agende seu horário!",
     url: "https://www.barbearialopesclub.com.br",
     siteName: "Barbearia Lopes Club",
     images: [
       {
         url: "https://www.barbearialopesclub.com.br/assets/lopesclubicon.png",
-        width: 1200, // ajuste se sua imagem tiver outro tamanho
-        height: 630,
+        width: 800,
+        height: 600,
         alt: "Barbearia Lopes Club",
       },
     ],
@@ -43,9 +42,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-      </head>
       <body className="antialiased font-sans">
         <Header />
         <main>
