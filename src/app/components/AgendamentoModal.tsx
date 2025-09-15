@@ -15,11 +15,11 @@ interface FormData {
 }
 
 const servicos = [
-  { id: 'corte', nome: 'Corte', preco: 'R$ 30,00' },
-  { id: 'barba', nome: 'Barba', preco: 'R$ 20,00' },
-  { id: 'cabelo-barba', nome: 'Cabelo e Barba', preco: 'R$ 45,00' },
-  { id: 'sombrancelha', nome: 'Sombrancelha', preco: 'R$ 5,00' },
-  { id: 'pezinho', nome: 'Pezinho', preco: 'R$ 10,00' }
+  { id: 'corte', nome: 'Corte', preco: 'R$ 35,00' },
+  { id: 'barba', nome: 'Barba', preco: 'R$ 25,00' },
+  { id: 'cabelo-barba', nome: 'Cabelo e Barba', preco: 'R$ 60,00' },
+  { id: 'sombrancelha', nome: 'Sombrancelha', preco: 'R$ 10,00' },
+  { id: 'pezinho', nome: 'Pezinho', preco: 'R$ 15,00' }
 ];
 
 const horarios = [
